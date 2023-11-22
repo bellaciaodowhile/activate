@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/medias.css">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
+    </script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar first-nav">
+        <div class="container d-flex justify-content-end">
+            <ul class="icons-socials">
+                <li class="nav-item">
+                    <a class="nav-link p-2" href="#">
+                        <img src="assets/img/icons/facebook.png" alt="Facebook">
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link p-2" href="#">
+                        <img src="assets/img/icons/instagram.png" alt="Intagram">
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link p-2" href="#">
+                        <img src="assets/img/icons/twitter-x.png" alt="Twitter">
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link p-2" href="#">
+                        <img src="assets/img/icons/tiktok.png" alt="Tiktok">
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link p-2" href="#">
+                        <img src="assets/img/icons/whatsapp.png" alt="WhatsApp">
+                    </a>
+                </li>
+            </ul>
+            <div class="search-input">
+                <input type="search" name="searchNav" placeholder="Buscar">
+                <button type="submit">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+            <button href="#" class="btn-login">
+                Login
+            </button>
+        </div>
+    </nav>
+    <header class="header-main">
+        <section class="second-nav-main">
+            <nav class="second-nav container d-flex justify-content-between align-items-center">
+                <div class="logo">
+                    <img src="assets/img/logo.png" alt="Activate">
+                </div>
+                <div class="menu-burguer">
+                    <div class="menu-line"></div>
+                    <div class="menu-line"></div>
+                    <div class="menu-line"></div>
+                </div>
+                <ul class="second-nav__items">
+                    <li class="second-item-nav active">
+                        <a href="#">
+                            Inicio
+                        </a>
+                    </li>
+                    <li class="second-item-nav">
+                        <a href="#">
+                            conócenos
+                        </a>
+                    </li>
+                    <li class="second-item-nav">
+                        <a href="#">
+                            inicia una campaña
+                        </a>
+                    </li>
+                    <li class="second-item-nav">
+                        <a href="#">
+                            campañas
+                        </a>
+                    </li>
+                    <li class="second-item-nav">
+                        <a href="#">
+                            dona
+                        </a>
+                    </li>
+                    <li class="second-item-nav">
+                        <a href="#">
+                            contacto
+                        </a>
+                    </li>
+                    <li class="second-item-nav">
+                        <a href="#">
+                            blog
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+        <section class="carousel-main">
+            <div id="carouselHeaderInterval" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="10000">
+                        <img src="assets/img/header.png" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselHeaderInterval"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselHeaderInterval"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            <nav class="options-menu desktop">
+                <div class="options-menu-content">
+                    <a class="options-menu-item">
+                        <img src="assets/img/menu/seguridad.png" alt="Seguridad">
+                        <span>seguridad</span>
+                    </a>
+                    <span class="sp-vert"></span>
+                    <a class="options-menu-item">
+                        <img src="assets/img/menu/vida.png" alt="Vida">
+                        <span>vida</span>
+                    </a>
+                    <span class="sp-vert"></span>
+                    <a class="options-menu-item">
+                        <img src="assets/img/menu/familia.png" alt="Familia">
+                        <span>familia</span>
+                    </a>
+                    <span class="sp-vert"></span>
+                    <a class="options-menu-item">
+                        <img src="assets/img/menu/educacion.png" alt="Educacion">
+                        <span>educacion</span>
+                    </a>
+                    <span class="sp-vert"></span>
+                    <a class="options-menu-item">
+                        <img src="assets/img/menu/salud.png" alt="Salud">
+                        <span>salud</span>
+                    </a>
+                    <span class="sp-vert"></span>
+                    <a class="options-menu-item">
+                        <img src="assets/img/menu/economia.png" alt="Economia">
+                        <span>economia</span>
+                    </a>
+                    <span class="sp-vert"></span>
+                    <a class="options-menu-item">
+                        <img src="assets/img/menu/ambiente.png" alt="Ambiente">
+                        <span>ambiente</span>
+                    </a>
+                    <span class="sp-vert"></span>
+                    <a class="options-menu-item">
+                        <img src="assets/img/menu/cultura.png" alt="Cultura">
+                        <span>cultura</span>
+                    </a>
+                    <span class="sp-vert"></span>
+                    <a class="options-menu-item">
+                        <img src="assets/img/menu/otro.png" alt="Otro">
+                        <span>otro</span>
+                    </a>
+                </div>
+            </nav>
+        </section>
+    </header>
+    <main>
+        <section class="banner">
+            <h2>Firma ahora en el botón</h2>
+            <img src="assets/img/banner.png" alt="Firma ahora en el botón">
+        </section>
+        <nav class="options-menu mobile">
+            <div class="options-menu-content">
+                <a class="options-menu-item">
+                    <span class="options-menu-item__img">
+                        <img src="assets/img/menu/seguridad.png" alt="Seguridad">
+                    </span>
+                    <span>seguridad</span>
+                </a>
+                <a class="options-menu-item">
+                    <span class="options-menu-item__img">
+                        <img src="assets/img/menu/vida.png" alt="Vida">
+                    </span>
+                    <span>vida</span>
+                </a>
+                <a class="options-menu-item">
+                    <span class="options-menu-item__img">
+                        <img src="assets/img/menu/familia.png" alt="Familia">
+                    </span>
+                    <span>familia</span>
+                </a>
+                <a class="options-menu-item">
+                    <span class="options-menu-item__img">
+                        <img src="assets/img/menu/educacion.png" alt="Educacion">
+                    </span>
+                    <span>educacion</span>
+                </a>
+                <a class="options-menu-item">
+                    <span class="options-menu-item__img">
+                        <img src="assets/img/menu/salud.png" alt="Salud">
+                    </span>
+                    <span>salud</span>
+                </a>
+                <a class="options-menu-item">
+                    <span class="options-menu-item__img">
+                        <img src="assets/img/menu/economia.png" alt="Economia">
+                    </span>
+                    <span>economia</span>
+                </a>
+                <a class="options-menu-item">
+                    <span class="options-menu-item__img">
+                        <img src="assets/img/menu/ambiente.png" alt="Ambiente">
+                    </span>
+                    <span>ambiente</span>
+                </a>
+                <a class="options-menu-item">
+                    <span class="options-menu-item__img">
+                        <img src="assets/img/menu/cultura.png" alt="Cultura">
+                    </span>
+                    <span>cultura</span>
+                </a>
+                <a class="options-menu-item">
+                    <span class="options-menu-item__img">
+                        <img src="assets/img/menu/otro.png" alt="Otro">
+                    </span>
+                    <span>otro</span>
+                </a>
+            </div>
+        </nav>
+        <section class="carousel-recents">
+            <div class="owl-carousel header">
+                <div class="card-activate" data-bg="assets/img/posts/recents/1.png">
+                    <div class="card-activate__content">
+                        <div class="card-activate__options">
+                            <div class="card-activate__options-item">
+                                <img src="assets/img/icons/playvideo.png" class="playvideo">
+                            </div>
+                            <div class="card-activate__options-item">
+                                <img src="assets/img/menu/cultura.png">
+                            </div>
+                        </div>
+                        <h3 class="card-activate__title">
+                            ahora la corte va contra la navidad
+                        </h3>
+                        <a href="#">
+                            Ver más...
+                        </a>
+                        <div class="card-activate__firms">
+                            Firmas: <span>100,240</span>
+                        </div>
+                        <div class="range-firms"></div>
+                        <div class="card-activate__author mt-2">
+                            Elaborada por: <span>Hazte Sentir</span>
+                        </div>
+                        <button class="card-activate__button">
+                            actívate
+                        </button>
+                    </div>
+                </div>
+                <div class="card-activate" data-bg="assets/img/posts/recents/2.png">
+                    <div class="card-activate__content">
+                        <div class="card-activate__options">
+                            <div class="card-activate__options-item">
+                                <img src="assets/img/icons/playvideo.png" class="playvideo">
+                            </div>
+                            <div class="card-activate__options-item">
+                                <img src="assets/img/menu/educacion.png">
+                            </div>
+                        </div>
+                        <h3 class="card-activate__title">
+                            ahora la corte va contra la navidad
+                        </h3>
+                        <a href="#">
+                            Ver más...
+                        </a>
+                        <div class="card-activate__firms">
+                            Firmas: <span>100,240</span>
+                        </div>
+                        <div class="range-firms"></div>
+                        <div class="card-activate__author mt-2">
+                            Elaborada por: <span>Hazte Sentir</span>
+                        </div>
+                        <button class="card-activate__button">
+                            actívate
+                        </button>
+                    </div>
+                </div>
+                <div class="card-activate" data-bg="assets/img/posts/recents/3.png">
+                    <div class="card-activate__content">
+                        <div class="card-activate__options">
+                            <div class="card-activate__options-item">
+                                <img src="assets/img/icons/playvideo.png" class="playvideo">
+                            </div>
+                            <div class="card-activate__options-item">
+                                <img src="assets/img/menu/familia.png">
+                            </div>
+                        </div>
+                        <h3 class="card-activate__title">
+                            ahora la corte va contra la navidad
+                        </h3>
+                        <a href="#">
+                            Ver más...
+                        </a>
+                        <div class="card-activate__firms">
+                            Firmas: <span>100,240</span>
+                        </div>
+                        <div class="range-firms"></div>
+                        <div class="card-activate__author mt-2">
+                            Elaborada por: <span>Hazte Sentir</span>
+                        </div>
+                        <button class="card-activate__button">
+                            actívate
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="posts-main">
+            <section class="posts ">
+                <div class="posts-section-title">
+                    <h6>POPULAR EN <strong>SEGURIDAD</strong></h6>
+                    <img src="assets/img/menu/seguridad.png" alt="SEGURIDAD">
+                </div>
+                <section class="post-articles owl-carousel">
+                    <article class="post">
+                        <img class="post__img" src="assets/img/posts/security/1.png">
+                        <div class="post__content">
+                            <div class="post__range">
+                                <span style="width: 80%;"></span>
+                            </div>
+                            <h6 class="post__title">Un grito de justicia: El 30 de abril no se olvida</h6>
+                            <p class="post__description">
+                                Agustín, un joven de 16 años, perdió trágicamente su vida en un incidente devastador...
+                            </p>
+                            <a class="post__more" href="#">
+                                Ver mas...
+                            </a>
+                            <div class="post__footer">
+                                <span class="post__firms">Firmas: <span>4,440</span></span>
+                                <span class="post__author">Elaborada por: <span>Veronica Menenes Medina</span></span>
+                            </div>
+                            <button class="post__button">
+                                actívate
+                            </button>
+                        </div>
+                    </article>
+                    <article class="post">
+                        <img class="post__img" src="assets/img/posts/security/2.png">
+                        <div class="post__content">
+                            <div class="post__range">
+                                <span style="width: 50%;"></span>
+                            </div>
+                            <h6 class="post__title">No más abuso de poder por la guardia civil en Michoacán</h6>
+                            <p class="post__description">
+                                Michoacán ha sido tesgtigo de una creciente preocupación: La guardia...
+                            </p>
+                            <a class="post__more" href="#">
+                                Ver mas...
+                            </a>
+                            <div class="post__footer">
+                                <span class="post__firms">Firmas: <span>1,250</span></span>
+                                <span class="post__author">Elaborada por: <span>Consejo Ciudadano Morelia</span></span>
+                            </div>
+                            <button class="post__button">
+                                actívate
+                            </button>
+                        </div>
+                    </article>
+                    <article class="post">
+                        <img class="post__img" src="assets/img/posts/security/3.png">
+                        <div class="post__content">
+                            <div class="post__range">
+                                <span style="width: 20%;"></span>
+                            </div>
+                            <h6 class="post__title">AMLO no debe de apoyar nigún pacto con el crimen organizado</h6>
+                            <p class="post__description">
+                                Andrés Manuel López Obrador dijo que está a favor de que las organizaciones...
+                            </p>
+                            <a class="post__more" href="#">
+                                Ver mas...
+                            </a>
+                            <div class="post__footer">
+                                <span class="post__firms">Firmas: <span>2,504</span></span>
+                                <span class="post__author">Elaborada por: <span>Red de Líderes Católicos </span></span>
+                            </div>
+                            <button class="post__button">
+                                actívate
+                            </button>
+                        </div>
+                    </article>
+                </section>
+            </section>
+            <section class="posts">
+                <div class="posts-section-title">
+                    <h6>POPULAR EN <strong>VIDA</strong></h6>
+                    <img src="assets/img/menu/vida.png" alt="VIDA">
+                </div>
+                <section class="post-articles owl-carousel">
+                    <article class="post">
+                        <img class="post__img" src="assets/img/posts/life/1.png">
+                        <div class="post__content">
+                            <div class="post__range">
+                                <span style="width: 40%;"></span>
+                            </div>
+                            <h6 class="post__title">Ley Olivia: Un paso importante para el apoyo en el duelo</h6>
+                            <p class="post__description">
+                                El 30 de octubre, la Diputada Mariana Nassar Piñeyro presentó la "Ley Olivia", una propuesta...
+                            </p>
+                            <a class="post__more" href="#">
+                                Ver mas...
+                            </a>
+                            <div class="post__footer">
+                                <span class="post__firms">Firmas: <span>7,140 </span></span>
+                                <span class="post__author">Elaborada por: <span>Juvi A.C. </span></span>
+                            </div>
+                            <button class="post__button">
+                                actívate
+                            </button>
+                        </div>
+                    </article>
+                    <article class="post">
+                        <img class="post__img" src="assets/img/posts/life/2.png">
+                        <div class="post__content">
+                            <div class="post__range">
+                                <span style="width: 90%;"></span>
+                            </div>
+                            <h6 class="post__title">¡Defiende la VIDA en tamaulipas! No al aborto hasta las 12 semananas</h6>
+                            <p class="post__description">
+                                El Diputado local de Morena, Isidro Varga, ha presentado una iniciativa para permitir...
+                            </p>
+                            <a class="post__more" href="#">
+                                Ver mas...
+                            </a>
+                            <div class="post__footer">
+                                <span class="post__firms">Firmas: <span>3,966  </span></span>
+                                <span class="post__author">Elaborada por: <span>Solidart  </span></span>
+                            </div>
+                            <button class="post__button">
+                                actívate
+                            </button>
+                        </div>
+                    </article>
+                    <article class="post">
+                        <img class="post__img" src="assets/img/posts/life/3.png">
+                        <div class="post__content">
+                            <div class="post__range">
+                                <span style="width: 20%;"></span>
+                            </div>
+                            <h6 class="post__title">Ministros de la suprema corte: En CHIHUAHUA se defiende la VIDA</h6>
+                            <p class="post__description">
+                                El proyecto del ministro Juian Luis González Alcántara Carranca, amparó en revisión...
+                            </p>
+                            <a class="post__more" href="#">
+                                Ver mas...
+                            </a>
+                            <div class="post__footer">
+                                <span class="post__firms">Firmas: <span>4,019</span></span>
+                                <span class="post__author">Elaborada por: <span>Actívate</span></span>
+                            </div>
+                            <button class="post__button">
+                                actívate
+                            </button>
+                        </div>
+                    </article>
+                </section>
+            </section>
+            <section class="posts">
+                <div class="posts-section-title">
+                    <h6>POPULAR EN <strong>FAMILIA</strong></h6>
+                    <img src="assets/img/menu/familia.png" alt="FAMILIA">
+                </div>
+                <section class="post-articles owl-carousel">
+                    <article class="post">
+                        <img class="post__img" src="assets/img/posts/family/1.png">
+                        <div class="post__content">
+                            <div class="post__range">
+                                <span style="width: 20%;"></span>
+                            </div>
+                            <h6 class="post__title">Asaktando los espacios privados de las MUJERES</h6>
+                            <p class="post__description">
+                                Solicitar baños de mujeres SOLO para Mujeres no es descriminación ni violencia...
+                            </p>
+                            <a class="post__more" href="#">
+                                Ver mas... 
+                            </a>
+                            <div class="post__footer">
+                                <span class="post__firms">Firmas: <span>13,060</span></span>
+                                <span class="post__author">Elaborada por: <span>Actívate</span></span>
+                            </div>
+                            <button class="post__button">
+                                actívate
+                            </button>
+                        </div>
+                    </article>
+                    <article class="post">
+                        <img class="post__img" src="assets/img/posts/family/2.png">
+                        <div class="post__content">
+                            <div class="post__range">
+                                <span style="width: 20%;"></span>
+                            </div>
+                            <h6 class="post__title">¿Ideología de Género obligatoria para tus hijos?</h6>
+                            <p class="post__description">
+                                El gobierno federal, a través de la SEP, está empecinado en volver a las personas sin...
+                            </p>
+                            <a class="post__more" href="#"> 
+                                Ver mas...
+                            </a>
+                            <div class="post__footer">
+                                <span class="post__firms">Firmas: <span>58,527</span></span>
+                                <span class="post__author">Elaborada por: <span>Asociación de Padres de...</span></span>
+                            </div>
+                            <button class="post__button">
+                                actívate
+                            </button>
+                        </div>
+                    </article>
+                    <article class="post">
+                        <img class="post__img" src="assets/img/posts/family/3.png">
+                        <div class="post__content">
+                            <div class="post__range">
+                                <span style="width: 87%;"></span>
+                            </div>
+                            <h6 class="post__title">¡Terapisas para quienes las deseen en SINALOA! La familia no se toca</h6>
+                            <p class="post__description">
+                                Buscan prohibir en el estado de Sinaloa las Terapias de conversión. COnsideran sanciones...
+                            </p>
+                            <a class="post__more" href="#">
+                                Ver mas...
+                            </a>
+                            <div class="post__footer">
+                                <span class="post__firms">Firmas: <span>3,815</span></span>
+                                <span class="post__author">Elaborada por: <span>Vía Familia </span></span>
+                            </div>
+                            <button class="post__button">
+                                actívate
+                            </button>
+                        </div>
+                    </article>
+                </section>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <section class="footer__activate">
+            <section class="footer__text">
+                <h1>Activamos causas para cambiar realidades</h1>
+                <button class="footer__button a-hover">
+                    Conócenos
+                </button>
+            </section>
+            <section class="footer__socials">
+                <a href="#">
+                    <img src="assets/img/icons/facebookWhite.png" alt="Facebook">
+                </a>
+                <a href="#">
+                    <img src="assets/img/icons/instagramWhite.png" alt="Instagram">
+                </a>
+                <a href="#">
+                    <img src="assets/img/icons/twitterWhite.png" alt="Twitter">
+                </a>
+                <a href="#">
+                    <img src="assets/img/icons/tiktokWhite.png" alt="Tiktok">
+                </a>
+                <a href="#">
+                    <img src="assets/img/icons/whatsappsWhite.png" alt="WhatsApp">
+                </a>
+            </section>
+        </section>
+
+        <section class="footer__author">
+            <div class="footer__author-logo">
+                <img src="assets/img/logo.png" alt="Actívate">
+            </div>
+            <div class="footer__author-terms-privacy">
+                <section>
+                    <span><a href="#">Avíso de Privacidad</a></span> | 
+                    <span><a href="#">Términos y condiciones</a></span> | 
+                    <span><a href="#">Contacto</a></span>
+                </section>
+                <span class="d-block">"Activate" es una marca registrada y perteneciente a Red Familia</span>
+                <span class="d-block">Desarrollado por <strong>Ideando Web 2023</strong></span>
+            </div>
+        </section>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous">
+    </script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>
