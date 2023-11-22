@@ -1,11 +1,16 @@
 console.log('AppJS')
 // Carousel activate
-new bootstrap.Carousel('#carouselHeaderInterval');
+$('.owl-carousel.nav-carousel').owlCarousel({
+    loop: true,
+    nav: true,
+    items: 1,
+    dots: false,
+    navText: ["<img src='assets/img/icons/prevFill.png'>","<img src='assets/img/icons/nextFill.png'>"]
+});
 $('.owl-carousel.header').owlCarousel({
     loop: true,
     margin: 10,
     nav: true,
-    // center: true,
     navText: ["<img src='assets/img/icons/prev.png'>","<img src='assets/img/icons/next.png'>"],
     responsive:{
         0:{
@@ -63,3 +68,11 @@ iconMenu.addEventListener('click', function() {
         iconMenu.classList.add('open');
     }
 }, false);
+// Sidebar Activate
+const triggerSidebar = document.querySelector('.menu-burguer');
+const sidebarActivate = document.querySelector('.sidebar-activate');
+const closeSidebar = document.querySelector('.sidebar-close');
+triggerSidebar.onclick = (e) => {
+    e.preventDefault();
+    sidebarActivate.classList.toggle('active');
+}

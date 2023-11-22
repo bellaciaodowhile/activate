@@ -1,4 +1,13 @@
 /* Medias */
+
+@media only screen and (max-width: 1200px) {
+    .donation {
+        font-size: .6em;
+        top: calc(12%);
+        right: calc(2%);
+        max-width: 250px;
+    }
+}
 @media only screen and (max-width: 991px)  {
     .navbar.first-nav {
         display: none;
@@ -6,8 +15,22 @@
     .second-nav__items {
         display: none !important;
     }
+    .nav-mobile {
+        display: flex;
+    }
+    .second-nav-main {
+        background: var(--color-primary);
+        padding-bottom: 1em;
+    }
     nav.second-nav {
         padding: 20px;
+        background: var(--color-primary);
+    }
+    nav.second-nav .logo img.mobile {
+        display: block;
+    }
+    nav.second-nav .logo img.desktop {
+        display: none;
     }
     .card-activate .card-activate__content {
         padding: 56px 21px 21px;
@@ -15,7 +38,6 @@
     nav.options-menu.mobile {
         display: block;
         position: relative;
-        /* background: F0F0F0; */
     }
     nav.options-menu.mobile .options-menu-content {
         background: #F0F0F0;
@@ -49,6 +71,10 @@
     }
     section.banner {
         background: #FFF;
+    }
+    .start__campanign {
+        left: calc(37%);
+        bottom: calc(25%);
     }
 }
 
@@ -159,6 +185,10 @@
         left: 0;
         background: var(--color-primary);
     }
+    .start__campanign {
+        font-size: 1em;
+        
+    }
 }
 @media only screen and (max-width: 750px) {
     .footer__author {
@@ -173,6 +203,21 @@
     }
     .footer__activate {
         padding: 4em 2em 1em;
+    }
+    .start__campanign {
+        font-size: .8em;
+        left: calc(33%);
+        bottom: calc(20%);
+        border: none;
+        padding: 5px 20px;
+    }
+    .donation {
+        font-size: .4em;
+        top: calc(5%);
+        max-width: 200px;
+    }
+    .donation__content {
+        padding: 20px;
     }
 }
 
@@ -195,7 +240,20 @@
         width: 100px;
     }
 }
-
+@media only screen and (max-width: 540px) {
+    .donation {
+        font-size: .3em;
+        top: calc(5%);
+        max-width: 150px;
+    }
+    .donation__content {
+        padding: 20px 10px 15px;
+        border-radius: 20px;
+    }
+    .donation__subtitle {
+        margin-bottom: 0;
+    }
+}
 @media only screen and (max-width: 420px)  {
     .footer__socials img {
         width: 30px;

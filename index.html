@@ -19,6 +19,8 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Owl Carousel -->
     <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body>
@@ -67,9 +69,10 @@
         <section class="second-nav-main">
             <nav class="second-nav container d-flex justify-content-between align-items-center">
                 <div class="logo">
-                    <img src="assets/img/logo.png" alt="Activate">
+                    <img src="assets/img/logo.png" class="desktop" alt="Activate">
+                    <img src="assets/img/logoLigth.png" class="mobile" alt="Activate">
                 </div>
-                <div class="menu-burguer">
+                <div class="menu-burguer nav-mobile">
                     <div class="menu-line"></div>
                     <div class="menu-line"></div>
                     <div class="menu-line"></div>
@@ -112,24 +115,56 @@
                     </li>
                 </ul>
             </nav>
+            <div class="search-input nav-mobile container w-100">
+                <input type="search" name="searchNav">
+                <button type="submit">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
         </section>
+        <div class="sidebar-activate animate__animated animate__fadeIn">
+            <a href="#" class="sidebar-activate-item a-hover active">
+                Inicio
+            </a>
+            <a href="#" class="sidebar-activate-item a-hover">
+                Conócenos
+            </a>
+            <a href="#" class="sidebar-activate-item a-hover">
+                Inicia una campaña
+            </a>
+            <a href="#" class="sidebar-activate-item a-hover">
+                Campaña
+            </a>
+            <a href="#" class="sidebar-activate-item a-hover">
+                Dona
+            </a>
+            <a href="#" class="sidebar-activate-item a-hover">
+                Contacto
+            </a>
+            <a href="#" class="sidebar-activate-item a-hover">
+                Blog
+            </a>
+            
+        </div>
         <section class="carousel-main">
-            <div id="carouselHeaderInterval" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active" data-bs-interval="10000">
-                        <img src="assets/img/header.png" class="d-block w-100" alt="...">
+            <div class="owl-carousel nav-carousel">
+                <div class="nav-carousel-item">
+                    <img src="assets/img/header-mobile.png" class="img-carousel">
+                    <button class="start__campanign a-hover">
+                        inicia un campaña
+                    </button>
+                    <div class="donation">
+                        <div class="donation__content">
+                            <h6 class="donation__title">
+                                Tu donación lo cambia todo.
+                            </h6>
+                            <p class="donation__subtitle">Tu donación activa causas, cambia realidades.</p>
+                        </div>
+                        <button class="donation__button a-hover">
+                            dona aquí
+                        </button>
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselHeaderInterval"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselHeaderInterval"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
             </div>
             <nav class="options-menu desktop">
                 <div class="options-menu-content">
