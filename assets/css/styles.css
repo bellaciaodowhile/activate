@@ -487,6 +487,68 @@ nav.options-menu .options-menu-content span {
     display: none;
 }
 
+/* Article */
+
+.article {
+    width: 100%;
+}
+
+.article:hover>.article__more {
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+.article .article__img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.article .article__title {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: var(--color-title-article);
+}
+
+.article .article__description {
+    font-style: italic;
+    margin-bottom: 0;
+}
+
+.article .article__more {
+    font-style: italic;
+    color: var(--color-text);
+    transition: var(--trs);
+}
+
+.article .article__firms {
+    display: block;
+    color: var(--color-primary);
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
+.article .article__firms span {
+    color: var(--color-text);
+    margin-bottom: 10px;
+}
+
+.article .article__author {
+    display: block;
+    font-weight: 700;
+}
+.article .article__button {
+    display: none;
+}
+.article .article__range {
+    display: none;
+}
+.article .article__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
 /* Owl Custom */
 .owl-carousel {
     position: relative;
