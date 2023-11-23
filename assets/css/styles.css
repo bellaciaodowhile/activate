@@ -502,7 +502,21 @@ nav.options-menu .options-menu-content span {
     width: 100%;
     margin-bottom: 10px;
 }
-
+.article .article__range {
+    display: block;
+    position: relative;
+    border-radius: 200px;
+    border: 0.2px solid silver;
+    height: 8px;
+    margin-bottom: 5px;
+}
+.article .article__range span {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: var(--color-primary);
+}
 .article .article__title {
     text-transform: uppercase;
     margin-bottom: 10px;
