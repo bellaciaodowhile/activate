@@ -498,6 +498,7 @@ nav.options-menu .options-menu-content span {
 
 .article {
     width: 30%;
+    min-width: 300px;
     padding: 10px;
     box-shadow: 0 5px 15px #00000026;
     border-radius: 10px;
@@ -512,15 +513,17 @@ nav.options-menu .options-menu-content span {
     width: 100%;
     margin-bottom: 10px;
 }
-.article .article__range {
+.article__range {
+    
     display: block;
     position: relative;
     border-radius: 200px;
     border: 0.2px solid silver;
     height: 8px;
     margin-bottom: 5px;
+    width: 100%;
 }
-.article .article__range span {
+.article__range span {
     position: absolute;
     height: 100%;
     top: 0;
@@ -562,11 +565,20 @@ nav.options-menu .options-menu-content span {
     font-weight: 700;
 }
 .article .article__button {
-    display: none;
+    display: block;
+    margin: 5px auto;
+    border: none;
+    border-radius: 200px;
+    padding: 5px 13px;
+    background: var(--color-primary);
+    color: white;
+    transform: scale(1.2);
+    transition: var(--trs);
 }
-.article .article__range {
-    display: none;
+.article .article__button:hover {
+  transform: translateY(-3px);
 }
+
 .article .article__footer {
     display: flex;
     align-items: center;
