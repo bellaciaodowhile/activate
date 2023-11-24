@@ -489,8 +489,14 @@ nav.options-menu .options-menu-content span {
 
 /* Article */
 
+.articles {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .article {
-    width: 100%;
+    width: 300px;
+    max-width: 300px;
 }
 
 .article:hover>.article__more {
