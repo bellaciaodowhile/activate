@@ -492,11 +492,15 @@ nav.options-menu .options-menu-content span {
 .articles {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
 .article {
-    width: 300px;
-    max-width: 300px;
+    width: 30%;
+    padding: 10px;
+    box-shadow: 0 5px 15px #00000026;
+    border-radius: 10px;
 }
 
 .article:hover>.article__more {
