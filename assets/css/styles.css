@@ -494,15 +494,16 @@ nav.options-menu .options-menu-content span {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    margin-bottom: 3em;
+    margin-bottom: 10em;
 }
 
 .article {
     width: 30%;
     min-width: 300px;
-    padding: 10px;
     box-shadow: 0 5px 15px #00000026;
     border-radius: 10px;
+    background: #EFEFEF;
+    border: 1px solid silver;
 }
 
 .article:hover>.article__more {
@@ -513,9 +514,13 @@ nav.options-menu .options-menu-content span {
 .article .article__img {
     width: 100%;
     margin-bottom: 10px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+.article .article__content {
+    padding: 1em;
 }
 .article__range {
-    
     display: block;
     position: relative;
     border-radius: 200px;
@@ -535,18 +540,22 @@ nav.options-menu .options-menu-content span {
     text-transform: uppercase;
     margin-bottom: 10px;
     font-weight: 700;
-    color: var(--color-title-article);
+    color: var(--color-title-post);
+    font-size: 1.3em;
 }
 
 .article .article__description {
-    font-style: italic;
+    font-style: normal;
     margin-bottom: 0;
+    font-size: 1.3em;
 }
 
 .article .article__more {
+    display: block;
     font-style: italic;
     color: var(--color-text);
     transition: var(--trs);
+    margin-top: 10px;
 }
 
 .article .article__firms {
@@ -564,20 +573,25 @@ nav.options-menu .options-menu-content span {
 .article .article__author {
     display: block;
     font-weight: 700;
+    color: rgb(141, 141, 141);
 }
 .article .article__button {
     display: block;
     margin: 5px auto;
     border: none;
     border-radius: 200px;
-    padding: 5px 13px;
+    padding: 2px 10px;
     background: var(--color-primary);
     color: white;
-    transform: scale(1.2);
     transition: var(--trs);
+    font-size: 1.6em;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    margin-top: 10px;
 }
 .article .article__button:hover {
-  transform: translateY(-3px);
+    transform: translateY(-3px);
 }
 
 .article .article__footer {
@@ -585,6 +599,7 @@ nav.options-menu .options-menu-content span {
     align-items: center;
     justify-content: space-between;
     flex-direction: row-reverse;
+    margin-top: 10px;
 }
 /* Owl Custom */
 .owl-carousel {
@@ -832,6 +847,7 @@ nav.options-menu .options-menu-content span {
     flex-direction: column;
     align-items: center;
     font-size: .9em;
+    z-index: 2;
 }
 .donation__content {
     background: #00000075;
@@ -848,6 +864,7 @@ nav.options-menu .options-menu-content span {
 .donation__subtitle {
     font-size: 1.5em;
     font-weight: bold;
+    padding: 0 20px;
 }
 .donation__button {
     border: none;
@@ -892,4 +909,38 @@ nav.options-menu .options-menu-content span {
     background: var(--color-primary);
     color: #fff;
     font-weight: bold;
+}
+/* Header category */
+.header-category {
+    position: relative;
+
+}
+.header-category::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, var(--color-primary), #0000, #0000);
+    z-index: 1;
+}
+.header-category img.header-category-bg {
+    object-fit: cover;
+    width: 100%;
+    max-height: 500px;
+}
+.header-category-title {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 43%;
+    left: 5%;
+    z-index: 1;
+    color: #fff;
+}
+.header-category-title h1 {
+    font-weight: bold;
+    margin-left: 10px;
+    font-size: 3em;
 }

@@ -238,6 +238,11 @@
     section.banner img {
         width: 100px;
     }
+    .header-category-title h1 {
+        font-weight: bold;
+        margin-left: 10px;
+        font-size: 2em;
+    }
 }
 @media only screen and (max-width: 540px) {
     .donation {
@@ -259,5 +264,13 @@
     }
     .footer__socials img[alt="Facebook"] {
         width: 14px;
+    }
+    .header-category-title h1 {
+        font-weight: bold;
+        margin-left: 10px;
+        font-size: 1.5em;
+    }
+    .header-category-title {
+        top: 70%;
     }
 }
