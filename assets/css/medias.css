@@ -76,6 +76,10 @@
         left: calc(37%);
         bottom: calc(25%);
     }
+    .main__campaign {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
 }
 
 @media only screen and (max-width: 800px)  {
@@ -257,6 +261,20 @@
     .donation__subtitle {
         margin-bottom: 0;
     }
+    .people__firms {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .section__author__firms {
+        padding: 10px;
+    }
+    .firms__now {
+        font-size: 1.2em;
+        padding: 0;
+    }
+    .campaign__others {
+        font-size: 2em;
+    }
 }
 @media only screen and (max-width: 420px)  {
     .footer__socials img {
@@ -272,5 +290,17 @@
     }
     .header-category-title {
         top: 70%;
+    }
+    .header__campaign-content {
+        padding: 6em 1em 1em;
+    }
+    .header__campaign-title {
+        font-size: 2.5em;
+    }
+    .article__campaign {
+        padding: 10px 1.3em;
+    }
+    .article {
+        min-width: 250px;
     }
 }
