@@ -18,6 +18,17 @@
     .nav-mobile {
         display: flex;
     }
+    .mobile {
+        display: flex !important;
+    }
+    .firms__now {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        top: inherit;
+        width: 100%;
+        z-index: 2;
+    }
     .second-nav-main {
         background: var(--color-primary);
         padding-bottom: 1em;
@@ -83,6 +94,9 @@
 }
 
 @media only screen and (max-width: 800px)  {
+    .signatories {
+        grid-template-columns: 1fr;
+    }
     nav.options-menu.mobile .options-menu-content {
         justify-content: flex-start;
     }
@@ -225,8 +239,17 @@
 }
 
 @media only screen and (max-width: 620px)  {
+    .status {
+        grid-template-columns: 1fr;
+    }
     body {
         background: #F0F0F0 !important;
+    }
+    body.dashboard {
+        background: #fff !important;
+    }
+    body.dashboard main {
+        background: #fff !important;
     }
     main {
         background: #F0F0F0;
@@ -270,10 +293,13 @@
     }
     .firms__now {
         font-size: 1.2em;
-        padding: 0;
+        padding: 20px 0;
     }
     .campaign__others {
         font-size: 2em;
+    }
+    section.banner h2 {
+        font-size: 1em;
     }
 }
 @media only screen and (max-width: 420px)  {
@@ -282,6 +308,10 @@
     }
     .footer__socials img[alt="Facebook"] {
         width: 14px;
+    }
+    .donation__content {
+        padding: 4px 10px 4px;
+        border-radius: 20px;
     }
     .header-category-title h1 {
         font-weight: bold;
