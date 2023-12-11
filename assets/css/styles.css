@@ -1854,7 +1854,7 @@ ul.items__campaign li {
     margin-bottom: 50px;
 }
 
-.percentage {
+.percentage__rounded {
     position: absolute;
     font-weight: bold;
     font-size: small;

@@ -269,6 +269,9 @@
     .status {
         grid-template-columns: 1fr;
     }
+    .activate__now {
+        display: none;
+    }
     body {
         background: #F0F0F0 !important;
     }
