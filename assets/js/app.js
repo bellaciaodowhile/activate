@@ -164,3 +164,80 @@ function closeAllSelect(elmnt) {
 /* If the user clicks anywhere outside the select box,
 then close all select boxes: */
 document.addEventListener("click", closeAllSelect);
+
+// * Chart
+function setGaugeValue() {
+    const needle = [...document.querySelectorAll('.needle')];
+    needle.map(need => {
+        let percentage = need.getAttribute('percentage');
+        const angle = percentage * 1.8;
+        need.style.transform = `translate(-50%, -100%) rotate(${angle}deg)`;
+    })
+}
+setGaugeValue();
+// * Doughnut ChartJS
+if (document.getElementById("doughnut-chart") != undefined) {
+    let chart = new Chart(document.getElementById("doughnut-chart"), {
+        type: 'doughnut',
+        data: {
+            labels: ['Ambiente', 'Cultura', 'Economia', 'Educacion', 'Familia', 'Seguridad', 'Vida', 'Salud', 'Otro'],
+            datasets: [{
+                label: "Demandas do alimentador",
+                backgroundColor: ["#44B4FA", "#D64265", "#6D82EB", "#E2A05C", "#5E8195", "#A1E2A7", "#5A7A51", "#6D82EB", "#444446"],
+                data: [40, 40, 20, 38.01, 15.33, 18.29, 10, 0.13, 20]
+            }, ]
+        },
+        options: {
+            legend: false,
+            responsive: true,
+            tooltips: {
+                displayColors: false,
+                callbacks: {
+                    title: function (tooltipItem, data) {
+                        return data['labels'][tooltipItem[0]['index']];
+                    },
+                    label: function (tooltipItem, data) {
+                        var dataset = data['datasets'][0];
+                        var percent = Math.round((dataset['data'][tooltipItem['index']] / dataset["_meta"][0]['total']) * 100)
+                        return '%: ' + percent + '%';
+                    },
+
+                }
+            }
+        }
+    });
+
+    // Generar leyenda personalizada
+    const legendContainer = document.getElementById("chart-legend");
+    const legendItems = chart.data.labels.map((label, index) => {
+        const backgroundColor = chart.data.datasets[0].backgroundColor[index];
+        const legendItem = document.createElement("div");
+        legendItem.classList.add("chart-legend-item");
+        legendItem.innerHTML = `<img src="assets/img/menu/${label.toLowerCase()}.png" alt="${label}"><span>${label}</span>`;
+        return legendItem;
+    });
+
+    // Agregar la leyenda al contenedor
+    legendItems.forEach((item) => {
+        legendContainer.appendChild(item);
+    });
+}
+
+function updateChart(percentage) {
+    const chartContainer = document.querySelector('.chart-container');
+    const point = document.querySelector('.point');
+    const percentageText = document.querySelector('.percentage');
+
+    const chartRadius = chartContainer.offsetWidth / 2;
+    const pointRadius = point.offsetWidth / 2;
+    const angle = (percentage / 140) * 360;
+
+    const radians = (angle - 90) * (Math.PI / 180);
+    const x = Math.cos(radians) * (chartRadius - pointRadius);
+    const y = Math.sin(radians) * (chartRadius - pointRadius);
+
+    point.style.transform = `translate(${x - 16 }px, ${y - 16 }px)`;
+    percentageText.children[0] = `0`; // Cantidad
+}
+
+updateChart(0); // Valor porcentual: en este caso tiene 10

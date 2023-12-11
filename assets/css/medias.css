@@ -1,5 +1,23 @@
 /* Medias */
-
+@media only screen and (max-width: 1820px) {
+    .section__graphs {
+        grid-template-columns: 1fr;
+    }
+    .article__count {
+        width: 100%;
+    }
+    .chart__top {
+        text-align: left;
+    }
+}
+@media only screen and (max-width: 1220px) {
+    .counts section.counts__main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .list__top {
+        grid-template-columns: 1fr;
+    }
+}
 @media only screen and (max-width: 1200px) {
     .donation {
         font-size: .6em;
@@ -91,9 +109,18 @@
         display: grid;
         grid-template-columns: 1fr;
     }
+    .graphs__gauge {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6em;
+        justify-content: center;
+    }
 }
 
 @media only screen and (max-width: 800px)  {
+    .graphs__gauge {
+        margin-left: 0;
+    }
     .signatories {
         grid-template-columns: 1fr;
     }
@@ -300,6 +327,9 @@
     }
     section.banner h2 {
         font-size: 1em;
+    }
+    .counts section.counts__main {
+        grid-template-columns: 1fr;
     }
 }
 @media only screen and (max-width: 420px)  {
