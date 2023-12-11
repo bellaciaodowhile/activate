@@ -331,10 +331,29 @@
     .counts section.counts__main {
         grid-template-columns: 1fr;
     }
+    .start__campanign {
+        left: calc(30%);
+        bottom: calc(5%);
+    }
+    .footer__socials {
+        transform: scale(0.8);
+        justify-content: center;
+    }
+    .footer__text h1 {
+        font-size: 2em !important;
+    }
 }
 @media only screen and (max-width: 420px)  {
     .footer__socials img {
         width: 30px;
+    }
+    .donation {
+        right: calc(30%);
+        top: 43%;
+    }
+    .donation__content {
+        display: none;
+        margin-top: 40px;
     }
     .footer__socials img[alt="Facebook"] {
         width: 14px;
