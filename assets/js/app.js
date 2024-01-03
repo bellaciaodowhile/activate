@@ -361,10 +361,9 @@ stepsManual.querySelector('.nextBtn').onclick = (e) => {
     }
     
 };
-document.querySelector('.view__preview').onclick = (e) => {
+document.querySelector('.preview').onclick = (e) => {
     e.preventDefault();
-
-    
+    document.querySelector('.container__check').style.display = 'block';
 }
 stepsManual.querySelector('.prevBtn').onclick = (e) => {
     currentManual--;
