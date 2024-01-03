@@ -364,6 +364,7 @@ stepsManual.querySelector('.nextBtn').onclick = (e) => {
 document.querySelector('.preview').onclick = (e) => {
     e.preventDefault();
     document.querySelector('.container__check').style.display = 'block';
+    document.querySelector('.container__mail').style.display = 'none';
 }
 stepsManual.querySelector('.prevBtn').onclick = (e) => {
     currentManual--;
