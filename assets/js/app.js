@@ -347,6 +347,11 @@ stepsForms.map(stepForm => {
 });
 const stepsManual = document.querySelector('.steps__form__manual');
 stepsManual.querySelector('.nextBtn').onclick = (e) => {
+    if (e.currentTarget.textContent == 'Enviar petición') {
+        alert('Mostrando revisión')
+        document.querySelector('.container__mail').style.display = 'block';
+        document.querySelector('.content__main').style.display = 'none';
+    }
     currentManual++;
     if (document.querySelector('#title__campaign').value == '') {
         alert('Se requiere el título de la campaña para continuar')
@@ -354,7 +359,13 @@ stepsManual.querySelector('.nextBtn').onclick = (e) => {
     } else {
         nextBtnManual(currentManual);
     }
+    
 };
+document.querySelector('.view__preview').onclick = (e) => {
+    e.preventDefault();
+
+    
+}
 stepsManual.querySelector('.prevBtn').onclick = (e) => {
     currentManual--;
     console.log(currentManual)
@@ -380,6 +391,26 @@ function nextBtnManual(n) {
         document.querySelector('.tips__zero__2').style.display = 'block';
 
     }
+    if (n == 3) {
+        document.querySelector('.tips__zero-2').style.display = 'none';
+        document.querySelector('.tips__zero-3').style.display = 'block';
+        document.querySelector('.tips__zero__2').style.display = 'none';
+    }
+    if (n == 4) {
+        document.querySelector('.tips__zero-3').style.display = 'none';
+        document.querySelector('.tips__zero-4').style.display = 'block';
+        document.querySelector('.tips__phone').style.display = 'block';
+    }
+    if (n == 5) {
+        document.querySelector('.tips__zero-4').style.display = 'none';
+        document.querySelector('.tips__zero-5').style.display = 'block';
+        document.querySelector('.tips__phone').style.display = 'none';
+        document.querySelector('.btn__remove').remove();
+        document.querySelector('.send__campaign').textContent = 'Enviar petición';
+
+        console.log(document.querySelector('.btn__remove'))
+        console.log(document.querySelector('.send__campaign'))
+    }
 }
 
 function prevBtnManual(n) {
@@ -399,6 +430,20 @@ function prevBtnManual(n) {
         document.querySelector('.tips__zero-1').style.display = 'block';
         document.querySelector('.tips__zero-2').style.display = 'none';
         document.querySelector('.tips__zero__2').style.display = 'none';
+    }
+    if (n == 2) {
+        document.querySelector('.tips__zero-2').style.display = 'block';
+        document.querySelector('.tips__zero__2').style.display = 'block';
+        document.querySelector('.tips__zero-3').style.display = 'none';
+    }
+    if (n == 3) {
+        document.querySelector('.tips__zero-3').style.display = 'block';
+        document.querySelector('.tips__zero-4').style.display = 'none';
+        document.querySelector('.tips__phone').style.display = 'none';
+    }
+    if (n == 4) {
+        document.querySelector('.tips__zero-4').style.display = 'block';
+        document.querySelector('.tips__zero-5').style.display = 'none';
     }
 }
 
@@ -467,7 +512,7 @@ var appendResults = function () {
             sortedResults[i].toLowerCase().replace(terms, '<strong>' +
                 terms +
                 '</strong>');
-
+        li.classList.add('option__list');
         li.innerHTML = result;
         ul.appendChild(li);
     }
@@ -475,6 +520,16 @@ var appendResults = function () {
     if (ul.className !== "term-list") {
         ul.className = "term-list";
     }
+
+    // *
+    [...document.querySelectorAll('.option__list')].map(option => {
+        option.onclick = (e) => {
+            e.preventDefault();
+            document.querySelector('#searchBox').value = option.textContent;
+            document.querySelector('#searchResults').classList.add('hidden');
+            console.log(option)
+        }
+    });
 };
 
 var clearResults = function () {

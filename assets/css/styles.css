@@ -22,6 +22,17 @@
     --trs-slow: all 1s ease-in-out;
 }
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
 
 /* General Details  */
 a {
@@ -2415,6 +2426,7 @@ ul.items__campaign li {
     font-weight: 700;
     background: #f8c9c9;
 }
+
 .remove-image .fa-times {
     background: #0000;
     color: red;
@@ -2431,4 +2443,130 @@ ul.items__campaign li {
 .remove-image:active {
     border: 0;
     transition: all 0.2s ease;
+}
+
+.input__activate {
+    border: none;
+    border-radius: 10px;
+    border: 2px solid silver;
+    padding: 1em;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.sp_mail {
+    position: relative;
+    width: 100%;
+}
+
+.sp_mail span {
+    position: absolute;
+    top: -13px;
+    left: calc(47%);
+    background: #fff;
+    width: 26px;
+    display: flex;
+    justify-content: center;
+}
+
+.item__login {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.item__login img {
+    width: 57px;
+    border-radius: 6px;
+    background: #fff;
+    padding: 10px;
+}
+
+.item__login div {
+    color: #fff;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+}
+
+.item__login.google {
+    background: #2775E3;
+}
+
+.item__login.facebook {
+    background: #39659D;
+}
+
+.a__activate {
+    color: #000;
+    text-decoration: underline !important;
+}
+
+.input-icon__activate {
+    position: relative;
+    width: 100%;
+    border: 2px solid silver;
+    border-radius: 6px;
+}
+
+.input-icon__activate input {
+    width: 100%;
+    border: none;
+    border-radius: 6px;
+    padding: 1em 1em 1em 5em;
+}
+
+.input-icon__activate img {
+    position: absolute;
+    left: 12px;
+    top: 11px;
+    width: 57px;
+    border-radius: 3px;
+}
+.tips__phone {
+    background: #f2f2f2;
+    display: none;
+}
+.nums_list {
+    padding-left: 0 !important;
+}
+.nums_list li {
+    margin-bottom: 20px;
+}
+.nums_list span {
+    background: var(--color-primary);
+    color: white;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border-radius: 200px;
+    margin-right: 5px;
+}
+.num_list--large span {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+}
+.btn__activate {
+    border: none;
+    padding: 8px 20px;
+    font-weight: bold;
+    font-size: 1.3em;
+    color: white;
+    background: var(--color-primary);
+    border-radius: 200px;
+}
+.container__mail {
+    position: relative;
+    display: none;
+}
+.img__mail {
+    position: absolute;
+    right: 0;
+    width: 20em;
 }
