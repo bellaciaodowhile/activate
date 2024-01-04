@@ -361,16 +361,16 @@ stepsManual.querySelector('.nextBtn').onclick = (e) => {
     }
     
 };
-document.querySelector('.preview').onclick = (e) => {
-    e.preventDefault();
-    document.querySelector('.container__check').style.display = 'block';
-    document.querySelector('.container__mail').style.display = 'none';
-}
 stepsManual.querySelector('.prevBtn').onclick = (e) => {
     currentManual--;
     console.log(currentManual)
     prevBtnManual(currentManual);
 };
+document.querySelector('.preview').onclick = (e) => {
+    e.preventDefault();
+    document.querySelector('.container__check').style.display = 'block';
+    document.querySelector('.container__mail').style.display = 'none';
+}
 
 function nextBtnManual(n) {
     console.log(n)
@@ -446,7 +446,23 @@ function prevBtnManual(n) {
         document.querySelector('.tips__zero-5').style.display = 'none';
     }
 }
-
+// * IA
+let currentOpenAI = 0;
+const stepsOpenAI = document.querySelector('.steps__form__ia');
+stepsOpenAI.querySelector('.nextBtn').onclick = (e) => {
+    currentOpenAI++;
+    nextBtnOpenAI(currentOpenAI);
+};
+stepsOpenAI.querySelector('.prevBtn').onclick = (e) => {
+    currentOpenAI--;
+    prevBtnOpenAI(currentOpenAI);
+};
+function nextBtnOpenAI(n) {
+    console.log(n)
+}
+function prevBtnOpenAI(n) {
+    console.log(n)
+}
 
 
 
