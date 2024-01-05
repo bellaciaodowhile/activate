@@ -30,6 +30,18 @@
     .container__step {
         padding: 3em 1em;
     }
+    .title__step  {
+        font-size: 2.3em;
+    }
+    nav.options-menu .options-menu-content {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+    }
+    .sp-vert {
+        display: none;
+    }
+
     .navbar.first-nav {
         display: none;
     }
@@ -302,6 +314,9 @@
         font-weight: bold;
         margin-left: 10px;
         font-size: 2em;
+    }
+    .title__step  {
+        font-size: 1.5em;
     }
 }
 @media only screen and (max-width: 540px) {
