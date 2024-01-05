@@ -386,10 +386,15 @@ function nextBtnManual(n) {
         document.querySelector('.tips__zero__1').style.display = 'none';
     }
     if (n == 2) {
-        document.querySelector('.tips__zero-1').style.display = 'none';
-        document.querySelector('.tips__zero-2').style.display = 'block';
-        document.querySelector('.tips__zero__2').style.display = 'block';
-
+        console.log(document.querySelector('.note-editable').innerHTML)
+        if (document.querySelector('.note-editable').innerHTML == '<p><br></p>') {
+            alert('Debe llenar el campo antes de continuar');
+            currentManual--;
+        } else {
+            document.querySelector('.tips__zero-1').style.display = 'none';
+            document.querySelector('.tips__zero-2').style.display = 'block';
+            document.querySelector('.tips__zero__2').style.display = 'block';
+        }
     }
     if (n == 3) {
         document.querySelector('.tips__zero-2').style.display = 'none';

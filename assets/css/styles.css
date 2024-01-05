@@ -2573,3 +2573,6 @@ ul.items__campaign li {
 .container__check {
     display: none;
 }
+.steps__form__ia {
+    display: none;
+}
