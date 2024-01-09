@@ -33,6 +33,10 @@
     .title__step  {
         font-size: 2.3em;
     }
+    nav.options-menu.mobile .options-menu-content {
+        flex-wrap: nowrap;
+        gap: 0;
+    }
     nav.options-menu .options-menu-content {
         flex-wrap: wrap;
         justify-content: center;
@@ -93,6 +97,7 @@
     nav.options-menu.mobile .options-menu-content::-webkit-scrollbar {
         height: 0px;
     }
+
     .options-menu-item__img {
         background: #fff;
         padding: 10px;
@@ -365,8 +370,20 @@
     }
 }
 @media only screen and (max-width: 420px)  {
+    .donation__button {
+        display: none;
+    }
+    .start__campanign {
+        bottom: calc(12%);
+    }
+    .owl-carousel.nav-carousel .owl-nav img {
+        width: 17px;
+    }
     .footer__socials img {
         width: 30px;
+    }
+    section.banner h2 {
+        font-size: 0.65em;
     }
     .donation {
         right: calc(30%);

@@ -33,55 +33,28 @@
 </head>
 
 <body class="dashboard">
+    <div class="sidebar-activate animate__animated animate__fadeIn">
+        <a href="#" class="sidebar-activate-item a-hover active">
+            estadísticas
+        </a>
+        <a href="#" class="sidebar-activate-item a-hover">
+            campañas
+        </a>
+        <a href="#" class="sidebar-activate-item a-hover">
+            usuarios
+        </a>
+        <a href="#" class="sidebar-activate-item a-hover">
+            Soporte
+        </a>
+        <a href="#" class="sidebar-activate-item a-hover">
+            Objetivos
+        </a>
+    </div>
 
-    <nav class="navbar first-nav admin">
-        <div class="container d-flex justify-content-end">
-            <ul class="icons-socials">
-                <li class="nav-item">
-                    <a class="nav-link p-2" href="#">
-                        <img src="assets/img/icons/facebook.png" alt="Facebook">
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link p-2" href="#">
-                        <img src="assets/img/icons/instagram.png" alt="Intagram">
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link p-2" href="#">
-                        <img src="assets/img/icons/twitter-x.png" alt="Twitter">
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link p-2" href="#">
-                        <img src="assets/img/icons/tiktok.png" alt="Tiktok">
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link p-2" href="#">
-                        <img src="assets/img/icons/whatsapp.png" alt="WhatsApp">
-                    </a>
-                </li>
-            </ul>
-            <div class="search-input">
-                <input type="search" name="searchNav" placeholder="Buscar">
-                <button type="submit">
-                    <i class="fa fa-search"></i>
-                </button>
-            </div>
-            <button href="#" class="btn-login">
-                <strong>Logout</strong>
-            </button>
-        </div>
-    </nav>
-    <header class="header-main">
-        <section class="second-nav-main">
-            <nav class="second-nav container d-flex justify-content-between align-items-center">
-                <div class="logo">
-                    <img src="assets/img/logo.png" class="desktop" alt="Activate">
-                    <img src="assets/img/logoLigth.png" class="mobile" alt="Activate">
-                </div>
-                <ul class="icons-socials mobile">
+    <section class="main">
+        <nav class="navbar first-nav admin">
+            <div class="container d-flex justify-content-end">
+                <ul class="icons-socials">
                     <li class="nav-item">
                         <a class="nav-link p-2" href="#">
                             <img src="assets/img/icons/facebook.png" alt="Facebook">
@@ -108,225 +81,254 @@
                         </a>
                     </li>
                 </ul>
-                <button href="#" class="btn-login mobile">
-                    Login
-                </button>
-                <div class="menu-burguer nav-mobile">
-                    <div class="menu-line"></div>
-                    <div class="menu-line"></div>
-                    <div class="menu-line"></div>
+                <div class="search-input">
+                    <input type="search" name="searchNav" placeholder="Buscar">
+                    <button type="submit">
+                        <i class="fa fa-search"></i>
+                    </button>
                 </div>
-                <ul class="second-nav__items">
-                    <li class="second-item-nav active">
-                        <a href="#">
-                            estadísticas
-                        </a>
-                    </li>
-                    <li class="second-item-nav">
-                        <a href="#">
-                            campañas
-                        </a>
-                    </li>
-                    <li class="second-item-nav">
-                        <a href="#">
-                            usuarios
-                        </a>
-                    </li>
-                    <li class="second-item-nav">
-                        <a href="#">
-                            soporte
-                        </a>
-                    </li>
-                    <li class="second-item-nav">
-                        <a href="#">
-                            objetivos
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="search-input nav-mobile container w-100">
-                <input type="search" name="searchNav">
-                <button type="submit">
-                    <i class="fa fa-search"></i>
+                <button href="#" class="btn-login">
+                    <strong>Logout</strong>
                 </button>
             </div>
-        </section>
-        <div class="sidebar-activate animate__animated animate__fadeIn">
-            <a href="#" class="sidebar-activate-item a-hover active">
-                estadísticas
-            </a>
-            <a href="#" class="sidebar-activate-item a-hover">
-                campañas
-            </a>
-            <a href="#" class="sidebar-activate-item a-hover">
-                usuarios
-            </a>
-            <a href="#" class="sidebar-activate-item a-hover">
-                Soporte
-            </a>
-            <a href="#" class="sidebar-activate-item a-hover">
-                Objetivos
-            </a>
-        </div>
-    </header>
-    <main class="container">
-        <section class="section__graphs">
-            <section class="counts">
-                <section class="counts__main">
-                    <article class="article__count">
-                        <div class="article__count-content">
-                            <p><strong>Total de firmas por día</strong></p>
-                            <h1>1,300</h1>
-                            <span>05/12/2023</span>
-                        </div>
-                        <div class="subtitle__article__count">
-                            Comparativo por día
-                        </div>
-                    </article>
-                    <article class="article__count">
-                        <div class="article__count-content">
-                            <p><strong>Total de firmas por mes</strong></p>
-                            <h1>15,549</h1>
-                            <span class="date__normal">Enero 2023</span>
-                        </div>
-                        <div class="subtitle__article__count">
-                            Administrador de campañas
-                        </div>
-                    </article>
-                    <article class="article__count">
-                        <div class="article__count-content">
-                            <p><strong>Total de campañas</strong></p>
-                            <h1>150</h1>
-                            <span class="date__normal">2023</span>
-                        </div>
-                        <div class="subtitle__article__count">
-                            Administrador de campañas
-                        </div>
-                    </article>
-                    <article class="article__count">
-                        <div class="article__count-content">
-                            <p><strong>Total de firmas por año</strong></p>
-                            <h1>394,324</h1>
-                            <span class="date__normal">2023</span>
-                        </div>
-                        <div class="subtitle__article__count">
-                            Comparativo mensual
-                        </div>
-                    </article>
-                </section>
-                <section class="major">
-                    <h1>objetivos principales</h1>
-                    <section class="graphs__gauge">
-
-                        <div class="gauge__main">
-                            <div class="gauge__content-title">Firmas por día</div>
-                            <div class="percentage__rounded _0">0%</div>
-                            <div class="percentage__rounded _25">25%</div>
-                            <div class="percentage__rounded _50">50%</div>
-                            <div class="percentage__rounded _75">75%</div>
-                            <div class="percentage__rounded _100">100%</div>
-                            <div class="percentage__rounded init">0</div>
-                            <div class="percentage__rounded total">2600</div>
-                            <div class="gauge">
-                                <div class="needle" percentage="50"></div>
+        </nav>
+        <header class="header-main">
+            <section class="second-nav-main">
+                <nav class="second-nav container d-flex justify-content-between align-items-center">
+                    <div class="logo">
+                        <img src="assets/img/logo.png" class="desktop" alt="Activate">
+                        <img src="assets/img/logoLigth.png" class="mobile" alt="Activate">
+                    </div>
+                    <ul class="icons-socials mobile">
+                        <li class="nav-item">
+                            <a class="nav-link p-2" href="#">
+                                <img src="assets/img/icons/facebook.png" alt="Facebook">
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link p-2" href="#">
+                                <img src="assets/img/icons/instagram.png" alt="Intagram">
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link p-2" href="#">
+                                <img src="assets/img/icons/twitter-x.png" alt="Twitter">
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link p-2" href="#">
+                                <img src="assets/img/icons/tiktok.png" alt="Tiktok">
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link p-2" href="#">
+                                <img src="assets/img/icons/whatsapp.png" alt="WhatsApp">
+                            </a>
+                        </li>
+                    </ul>
+                    <button href="#" class="btn-login mobile">
+                        Login
+                    </button>
+                    <div class="menu-burguer nav-mobile">
+                        <div class="menu-line"></div>
+                        <div class="menu-line"></div>
+                        <div class="menu-line"></div>
+                    </div>
+                    <ul class="second-nav__items">
+                        <li class="second-item-nav active">
+                            <a href="#">
+                                estadísticas
+                            </a>
+                        </li>
+                        <li class="second-item-nav">
+                            <a href="#">
+                                campañas
+                            </a>
+                        </li>
+                        <li class="second-item-nav">
+                            <a href="#">
+                                usuarios
+                            </a>
+                        </li>
+                        <li class="second-item-nav">
+                            <a href="#">
+                                soporte
+                            </a>
+                        </li>
+                        <li class="second-item-nav">
+                            <a href="#">
+                                objetivos
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="search-input nav-mobile container w-100">
+                    <input type="search" name="searchNav">
+                    <button type="submit">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+            </section>
+        </header>
+        <main class="container">
+            <section class="section__graphs">
+                <section class="counts">
+                    <section class="counts__main">
+                        <article class="article__count">
+                            <div class="article__count-content">
+                                <p><strong>Total de firmas por día</strong></p>
+                                <h1>1,300</h1>
+                                <span>05/12/2023</span>
                             </div>
-                        </div>
-                        <div class="gauge__main">
-                            <div class="gauge__content-title">Firmas por día</div>
-                            <div class="percentage__rounded _0">0%</div>
-                            <div class="percentage__rounded _25">25%</div>
-                            <div class="percentage__rounded _50">50%</div>
-                            <div class="percentage__rounded _75">75%</div>
-                            <div class="percentage__rounded _100">100%</div>
-                            <div class="percentage__rounded init">0</div>
-                            <div class="percentage__rounded total">50&nbsp;K</div>
-                            <div class="gauge">
-                                <div class="needle" percentage="30"></div>
+                            <div class="subtitle__article__count">
+                                Comparativo por día
                             </div>
-                        </div>
-                        <div class="gauge__main">
-                            <div class="gauge__content-title">Firmas por día</div>
-                            <div class="percentage__rounded _0">0%</div>
-                            <div class="percentage__rounded _25">25%</div>
-                            <div class="percentage__rounded _50">50%</div>
-                            <div class="percentage__rounded _75">75%</div>
-                            <div class="percentage__rounded _100">100%</div>
-                            <div class="percentage__rounded init">0</div>
-                            <div class="percentage__rounded total">1.5&nbsp;M</div>
-                            <div class="gauge">
-                                <div class="needle" percentage="18"></div>
+                        </article>
+                        <article class="article__count">
+                            <div class="article__count-content">
+                                <p><strong>Total de firmas por mes</strong></p>
+                                <h1>15,549</h1>
+                                <span class="date__normal">Enero 2023</span>
                             </div>
-                        </div>
-
+                            <div class="subtitle__article__count">
+                                Administrador de campañas
+                            </div>
+                        </article>
+                        <article class="article__count">
+                            <div class="article__count-content">
+                                <p><strong>Total de campañas</strong></p>
+                                <h1>150</h1>
+                                <span class="date__normal">2023</span>
+                            </div>
+                            <div class="subtitle__article__count">
+                                Administrador de campañas
+                            </div>
+                        </article>
+                        <article class="article__count">
+                            <div class="article__count-content">
+                                <p><strong>Total de firmas por año</strong></p>
+                                <h1>394,324</h1>
+                                <span class="date__normal">2023</span>
+                            </div>
+                            <div class="subtitle__article__count">
+                                Comparativo mensual
+                            </div>
+                        </article>
+                    </section>
+                    <section class="major">
+                        <h1>objetivos principales</h1>
+                        <section class="graphs__gauge">
+    
+                            <div class="gauge__main">
+                                <div class="gauge__content-title">Firmas por día</div>
+                                <div class="percentage__rounded _0">0%</div>
+                                <div class="percentage__rounded _25">25%</div>
+                                <div class="percentage__rounded _50">50%</div>
+                                <div class="percentage__rounded _75">75%</div>
+                                <div class="percentage__rounded _100">100%</div>
+                                <div class="percentage__rounded init">0</div>
+                                <div class="percentage__rounded total">2600</div>
+                                <div class="gauge">
+                                    <div class="needle" percentage="50"></div>
+                                </div>
+                            </div>
+                            <div class="gauge__main">
+                                <div class="gauge__content-title">Firmas por día</div>
+                                <div class="percentage__rounded _0">0%</div>
+                                <div class="percentage__rounded _25">25%</div>
+                                <div class="percentage__rounded _50">50%</div>
+                                <div class="percentage__rounded _75">75%</div>
+                                <div class="percentage__rounded _100">100%</div>
+                                <div class="percentage__rounded init">0</div>
+                                <div class="percentage__rounded total">50&nbsp;K</div>
+                                <div class="gauge">
+                                    <div class="needle" percentage="30"></div>
+                                </div>
+                            </div>
+                            <div class="gauge__main">
+                                <div class="gauge__content-title">Firmas por día</div>
+                                <div class="percentage__rounded _0">0%</div>
+                                <div class="percentage__rounded _25">25%</div>
+                                <div class="percentage__rounded _50">50%</div>
+                                <div class="percentage__rounded _75">75%</div>
+                                <div class="percentage__rounded _100">100%</div>
+                                <div class="percentage__rounded init">0</div>
+                                <div class="percentage__rounded total">1.5&nbsp;M</div>
+                                <div class="gauge">
+                                    <div class="needle" percentage="18"></div>
+                                </div>
+                            </div>
+    
+                        </section>
                     </section>
                 </section>
+                <section class="firms__top">
+                    <div class="chart__top">
+                        <h1 class="fw-bold">Firmas por tema</h1>
+                        <div class="chart__main">
+                            <canvas id="doughnut-chart" width="80%" height="100%" class="mt-4"></canvas>
+                            <div id="chart-legend" class="chart-legend"></div>
+                        </div>
+                    </div>
+                    <div class="list__top">
+                        <div class="box-top">
+                            <h2 class="fw-bold text-center">Top Estados</h2>
+                            <ul class="mt-4">
+                                <li>
+                                    <span>1.- Ciudad de México</span>
+                                    <span>53,223</span>
+                                </li>
+                                <li>
+                                    <span>2.- Puebla</span>
+                                    <span>22,350</span>
+                                </li>
+                                <li>
+                                    <span>3.- Veracrúz</span>
+                                    <span>20,115</span>
+                                </li>
+                                <li>
+                                    <span>4.- Estado de México</span>
+                                    <span>19,001</span>
+                                </li>
+                                <li>
+                                    <span>5.- Chihuahua</span>
+                                    <span>18,520</span>
+                                </li>
+                            </ul>
+                            <a href="#" class="fw-bold mt-3">Ver más</a>
+                        </div>
+                        <div class="box-top">
+                            <h2 class="fw-bold text-center">Top Campañas</h2>
+                            <ul class="mt-4">
+                                <li>
+                                    <span>1.- Ahora la corte va...</span>
+                                    <span>53,223</span>
+                                </li>
+                                <li>
+                                    <span>2.- No más abuso...</span>
+                                    <span>22,350</span>
+                                </li>
+                                <li>
+                                    <span>3.- Un grito de justicia...</span>
+                                    <span>20,115</span>
+                                </li>
+                                <li>
+                                    <span>4.- Ley Olivia...</span>
+                                    <span>19,001</span>
+                                </li>
+                                <li>
+                                    <span>5.- Ahora la corte va...</span>
+                                    <span>18,520</span>
+                                </li>
+                            </ul>
+                            <a href="#" class="fw-bold mt-3">Ver más</a>
+                        </div>
+                    </div>
+                </section>
             </section>
-            <section class="firms__top">
-                <div class="chart__top">
-                    <h1 class="fw-bold">Firmas por tema</h1>
-                    <div class="chart__main">
-                        <canvas id="doughnut-chart" width="80%" height="100%" class="mt-4"></canvas>
-                        <div id="chart-legend" class="chart-legend"></div>
-                    </div>
-                </div>
-                <div class="list__top">
-                    <div class="box-top">
-                        <h2 class="fw-bold text-center">Top Estados</h2>
-                        <ul class="mt-4">
-                            <li>
-                                <span>1.- Ciudad de México</span>
-                                <span>53,223</span>
-                            </li>
-                            <li>
-                                <span>2.- Puebla</span>
-                                <span>22,350</span>
-                            </li>
-                            <li>
-                                <span>3.- Veracrúz</span>
-                                <span>20,115</span>
-                            </li>
-                            <li>
-                                <span>4.- Estado de México</span>
-                                <span>19,001</span>
-                            </li>
-                            <li>
-                                <span>5.- Chihuahua</span>
-                                <span>18,520</span>
-                            </li>
-                        </ul>
-                        <a href="#" class="fw-bold mt-3">Ver más</a>
-                    </div>
-                    <div class="box-top">
-                        <h2 class="fw-bold text-center">Top Campañas</h2>
-                        <ul class="mt-4">
-                            <li>
-                                <span>1.- Ahora la corte va...</span>
-                                <span>53,223</span>
-                            </li>
-                            <li>
-                                <span>2.- No más abuso...</span>
-                                <span>22,350</span>
-                            </li>
-                            <li>
-                                <span>3.- Un grito de justicia...</span>
-                                <span>20,115</span>
-                            </li>
-                            <li>
-                                <span>4.- Ley Olivia...</span>
-                                <span>19,001</span>
-                            </li>
-                            <li>
-                                <span>5.- Ahora la corte va...</span>
-                                <span>18,520</span>
-                            </li>
-                        </ul>
-                        <a href="#" class="fw-bold mt-3">Ver más</a>
-                    </div>
-                </div>
-            </section>
-        </section>
-    </main>
-    <footer class="p-5"></footer>
+        </main>
+        <footer class="p-5"></footer>
+    </section>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>

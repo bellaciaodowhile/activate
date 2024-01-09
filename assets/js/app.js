@@ -79,9 +79,11 @@ iconMenu.addEventListener('click', function () {
 const triggerSidebar = document.querySelector('.menu-burguer');
 const sidebarActivate = document.querySelector('.sidebar-activate');
 const closeSidebar = document.querySelector('.sidebar-close');
+const mainContent = document.querySelector('section.main');
 triggerSidebar.onclick = (e) => {
     e.preventDefault();
     sidebarActivate.classList.toggle('active');
+    mainContent.classList.toggle('active');
 }
 /* Select Custom */
 var x, i, j, l, ll, selElmnt, a, b, c;
