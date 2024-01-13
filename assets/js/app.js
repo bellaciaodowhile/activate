@@ -310,15 +310,19 @@ stepsForms.map(stepForm => {
                     if (valid[0] != undefined) {
                         if (valid[0].getAttribute('item') == 'create__ia') {
                             // TODO: OpenAI
-                            document.querySelector('.steps__form[item="ia"]').classList.add('active');
+                            document.querySelector('.steps__form__ia').style.display = 'block';
                             document.querySelector('.steps__form[item="one"]').style.display = 'none';
                             showStep(2);
+                            currentStep--;
+                            currentOpenAI = 0;
+                            localStorage.setItem('form','openai')
                         } else {
                             // TODO: Manual
                             document.querySelector('.steps__form__manual').classList.add('active');
                             document.querySelector('.steps__form[item="one"]').style.display = 'none';
                             showStep(2);
                             currentStep--;
+                            localStorage.setItem('form','manual')
                             document.querySelector('.tips__zero').style.display = 'block';
                             currentManual = 0;
                         }
@@ -348,6 +352,9 @@ stepsForms.map(stepForm => {
 
 });
 const stepsManual = document.querySelector('.steps__form__manual');
+// if (localStorage.getItem('form') == 'openai') {
+//     currentManual = 2;
+// }
 stepsManual.querySelector('.nextBtn').onclick = (e) => {
     if (e.currentTarget.textContent == 'Enviar petición') {
         alert('Mostrando revisión')
@@ -356,7 +363,7 @@ stepsManual.querySelector('.nextBtn').onclick = (e) => {
     }
     currentManual++;
     if (document.querySelector('#title__campaign').value == '') {
-        alert('Se requiere el título de la campaña para continuar')
+        alert('Se requiere el titulo')
         currentManual--;
     } else {
         nextBtnManual(currentManual);
@@ -365,7 +372,7 @@ stepsManual.querySelector('.nextBtn').onclick = (e) => {
 };
 stepsManual.querySelector('.prevBtn').onclick = (e) => {
     currentManual--;
-    console.log(currentManual)
+    console.log(currentManual);
     prevBtnManual(currentManual);
 };
 document.querySelector('.preview').onclick = (e) => {
@@ -374,13 +381,17 @@ document.querySelector('.preview').onclick = (e) => {
     document.querySelector('.container__mail').style.display = 'none';
 }
 
-function nextBtnManual(n) {
+function nextBtnManual(n, status = '') {
+    console.log('Nextmanual')
     console.log(n)
+    console.log(localStorage.getItem('form'))
     if (n == 0) {
+        // if (localStorage.getItem('form') != 'openai') {
         if (document.querySelector('#title__campaign').value == '') {
             alert('Se requiere el título de la campaña para continuar')
             currentManual--;
         }
+        // }
     }
     if (n == 1) {
         document.querySelector('div[step="tips__zero"]').style.display = 'none';
@@ -389,13 +400,19 @@ function nextBtnManual(n) {
     }
     if (n == 2) {
         console.log(document.querySelector('.note-editable').innerHTML)
-        if (document.querySelector('.note-editable').innerHTML == '<p><br></p>') {
-            alert('Debe llenar el campo antes de continuar');
-            currentManual--;
-        } else {
+        if (status != '') {
             document.querySelector('.tips__zero-1').style.display = 'none';
             document.querySelector('.tips__zero-2').style.display = 'block';
             document.querySelector('.tips__zero__2').style.display = 'block';
+        } else {
+            if (document.querySelector('.note-editable').innerHTML == '<p><br></p>') {
+                alert('Debe llenar el campo antes de continuar');
+                currentManual--;
+            } else {
+                document.querySelector('.tips__zero-1').style.display = 'none';
+                document.querySelector('.tips__zero-2').style.display = 'block';
+                document.querySelector('.tips__zero__2').style.display = 'block';
+            }
         }
     }
     if (n == 3) {
@@ -456,6 +473,7 @@ function prevBtnManual(n) {
 // * IA
 let currentOpenAI = 0;
 const stepsOpenAI = document.querySelector('.steps__form__ia');
+let stepsOnlyOpenAI = [...stepsOpenAI.querySelectorAll('div[step]')];
 stepsOpenAI.querySelector('.nextBtn').onclick = (e) => {
     currentOpenAI++;
     nextBtnOpenAI(currentOpenAI);
@@ -464,11 +482,74 @@ stepsOpenAI.querySelector('.prevBtn').onclick = (e) => {
     currentOpenAI--;
     prevBtnOpenAI(currentOpenAI);
 };
+stepsOnlyOpenAI.map(step => {
+    let current = step.getAttribute('step');
+    if (current == 'step_' + currentOpenAI) {
+        console.log('step_' + currentOpenAI)
+        step.style.display = 'block';
+    } else {
+        step.style.display = 'none';
+    }
+});
 function nextBtnOpenAI(n) {
     console.log(n)
+    let opentai__one = document.querySelector('textarea[name="openai__one"]');
+    if (n == 1) {
+        if (opentai__one.value == '') {
+            alert('Se requiere llenar este paso para continuar')
+            currentOpenAI--;
+        } else {
+            document.querySelector('[step="step_0"]').style.display = 'none';
+            document.querySelector('[step="step_1"]').style.display = 'block';
+            stepsOpenAI.querySelector('.openai__controls').style.display = 'none';
+
+            // TODO: Realizando proceso con OPENAI
+            // ? opentai__one.value
+
+            setTimeout(() => {
+                nextBtnOpenAI(currentOpenAI = 2);
+            }, 5000);
+            let text = 'Mientras lees esto, están corriendo 5 seg. para cambiar al otro paso, solo es una simulación de espera. Este es el contenido que leerá OpenAI: ' + opentai__one.value;
+            alert(text);
+        }
+    }
+    if (n == 2) {
+        stepsOpenAI.querySelector('.openai__controls').style.display = 'block';
+        document.querySelector('[step="step_1"]').style.display = 'none';
+        document.querySelector('[step="step_2"]').style.display = 'block';
+        // TODO: Titulo de la campañana por OpenAI
+        document.querySelector('#title__campaign__openai').value = 'Este es el título que eligió OpenAI para ti: ' + opentai__one.value.slice(0, 20);
+        // TODO: Descripción de la campaña por OpenAI
+        var contenido = `<p>${'Esta es la descripción que elegió OpenAI para ti: ' + opentai__one.value }</p>`;
+        $('#summernote__openai').summernote('code', contenido);
+    }
+    if (n == 3) {
+        document.querySelector('[step="step_2"]').style.display = 'none';
+        document.querySelector('[step="step_3"]').style.display = 'block';
+    }
+    if (n == 4) {
+        document.querySelector('.steps__form__ia').style.display = 'none';
+        document.querySelector('.steps__form__manual').classList.add('active');
+        document.querySelector('[step="tips__zero"]').style.display = 'none';
+        nextBtnManual(currentManual = 2, 'true');
+    }
 }
 function prevBtnOpenAI(n) {
     console.log(n)
+    if (n < 0) {
+        document.querySelector('.steps__form__ia').style.display = 'none';
+        document.querySelector('.steps__form[item="one"]').style.display = 'block';
+        currentOpenAI = 0;
+    }
+    if (n == 1) {
+        document.querySelector('[step="step_0"]').style.display = 'block';
+        document.querySelector('[step="step_2"]').style.display = 'none';
+        currentOpenAI--;
+    }
+    if (n == 2) {
+        document.querySelector('[step="step_3"]').style.display = 'none';
+        document.querySelector('[step="step_2"]').style.display = 'block';
+    }
 }
 
 
@@ -577,8 +658,21 @@ optionsStepThree.map(option => {
         option.classList.add('active');
     });
 });
-// * Editor
+// * Editor Manual
 $('#summernote').summernote({
+    placeholder: '',
+    tabsize: 2,
+    height: 100,
+    toolbar: [
+        ['font', ['bold', 'italic']],
+        ['para', ['ol', 'ul']],
+        ['insert', ['link', 'video', 'picture']],
+        ['view', ['help']]
+    ]
+});
+
+// * Editor OpenAI
+$('#summernote__openai').summernote({
     placeholder: '',
     tabsize: 2,
     height: 100,

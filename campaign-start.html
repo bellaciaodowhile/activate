@@ -357,7 +357,7 @@
                             <div class="container__step">
                                 <h1 class="title__step text-left">Añade una imagen</h1>
                                 <p class="mt-5">Utiliza una imagen que refleje el problema que expone tu campaña</p>
-                                <!-- <div class="file-upload">
+                                <div class="file-upload">
                                     <div class="image-upload-wrap">
                                         <input class="file-upload-input" type='file' onchange="readURL(this);"
                                             accept="image/*" />
@@ -375,13 +375,13 @@
                                     </div>
                                     <button class="file-upload-btn" type="button"
                                         onclick="$('.file-upload-input').trigger( 'click' )">Agregar imagen</button>
-                                </div> -->
-                                <div class="ucropper"
+                                </div>
+                                <!-- <div class="ucropper"
                                     cropper-ratio="16:9"
                                     cropper-url="upload.php"
                                     cropper-msg="Drop files here / click to upload.">
                                     <input type="hidden" name="file"/>
-                                </div>
+                                </div> -->
                                 <p class="mt-5">Las imágenes de 1200 x 675 como mínimo ser verán bien en cualquier tipo de
                                     pantalla.</p>
                             </div>
@@ -570,22 +570,101 @@
                 <!-- Campaña con OpenAI -->
                 <div class="steps__form__ia">
                     <div class="steps-main">
-                        <div step="show">
+                        <div step="step_0">
                             <!-- 1 -->
                             <div class="container__step">
-                                <h1 class="title__step text-center">Creando la sección de OpenAI</h1>
-                                <p class="mt-5">Ayudará a que más personas descubran tu campaña</p>
+                                <h1 class="title__step text-left">Dinos lo que quieres cambiar.</h1>
+                                <p class="mt-5">Usaremos esta instrucción para generar el borrador de tu campaña</p>
+                                <p><strong>Quiero...</strong></p>
+                                <div class="main__textarea">
+                                    <textarea name="openai__one" cols="30" rows="10" class="textarea__activate" maxlength="418"></textarea>
+                                    <span class="float-end">418</span>
+                                </div>
                             </div>
                         </div>
+
+
+
+
+                        <!-- TODO: Pasos por configurar -->
+
+                        <div step="step_1">
+                            <!-- 1 -->
+                            <div class="container__step">
+                                <div class="d-flex justify-content-center">
+                                    <img src="./assets/img/icons/loading.gif" class="loading__openai" alt="loading__openai">
+                                </div>
+                                <h1 class="title__step text-center mt-4">Construyendo el borrador de tu campaña.</h1>
+                                <div class="d-flex justify-content-center">
+                                    <p class="mt-5 max-width-300 text-center">Chat GPT es inteligente, pero puede proporcionar información inexacta sobre personas, lugares o hechos. Comprueba que el contenido te tu petición sea exacto.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div step="step_2">
+                            <!-- 1 -->
+                            <div class="container__step">
+                                <h1 class="title__step text-left mt-4">Una última observación</h1>
+                                <p>(Opcional)</p>
+                                <p>Añadir una historia personal hará que la campaña sesa más sólida.</p>
+                                <p><strong>¿Por qué es personal para ti?</strong></p>
+                                <div class="main__textarea">
+                                    <textarea name="" cols="30" rows="10" class="textarea__activate" maxlength="418"></textarea>
+                                    <span class="float-end">418</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div step="step_3">
+                            <div class="container__step">
+                                <h1 class="title__step text-left">Este es el borrador de tu campaña</h1>
+                                <p class="mt-5">Eres responsable del contenido de tu campaña: revisa y edita lo que sea necesario para asegurarte que reflejan tu historia.</p>
+                                <div class="text-field">
+                                    <p><strong>Título de la petición</strong></p>
+                                    <input type="text" name="text" id="title__campaign__openai" maxlength="90">
+                                    <span>90</span>
+                                </div>
+                                <p class="mt-5"><strong>Descripción de la petición</strong></p>
+                                <section>
+                                    <textarea id="summernote__openai"></textarea>
+                                </section>
+                            </div>
+                        </div>
+
+                        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                         <!-- Next&Prev -->
                     </div>
-                    <div class="container__step">
+                    <div class="container__step openai__controls">
                         <div class="d-flex justify-content-end steps-controls">
                             <button class="button btn__prev prevBtn">Volver</button>
                             <button class="button btn__next nextBtn">Continuar</button>
                         </div>
                     </div>
     
+
+
+
+
+
+
+
                 </div>
             </div>
         </main>
